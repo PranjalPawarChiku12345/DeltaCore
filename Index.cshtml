@@ -1,0 +1,27 @@
+@model List<DeltaCore.Models.Product>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<h2>Products</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Id</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
